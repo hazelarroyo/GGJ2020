@@ -940,7 +940,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1929461787}
-  lastText: {fileID: 0}
 --- !u!114 &1212707127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1564,7 +1563,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Luckily for him, the extremely low survival rate of these wannbe heroes
+  m_Text: Luckily for him, the extremely low survival rate of these wannabe heroes
     makes restocking his shop quite easy...
 --- !u!222 &1944230438
 CanvasRenderer:

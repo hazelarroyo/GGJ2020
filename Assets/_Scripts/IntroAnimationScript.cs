@@ -7,8 +7,6 @@ public class IntroAnimationScript : MonoBehaviour
 {
     public Animator anim;
 
-    public Text lastText;
-
     void Awake()
     {
         StartCoroutine("IntroAnims");
