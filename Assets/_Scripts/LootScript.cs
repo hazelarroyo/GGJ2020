@@ -9,6 +9,7 @@ public class LootScript : MonoBehaviour
     public float maxLootTime = 3f;
     public float increaseTimer = 0.1f;
     public int numLoot;
+    public float variance;
     bool looting;
     bool collided = false;
 
@@ -53,7 +54,8 @@ public class LootScript : MonoBehaviour
         for (int i = 0; i < numLoot; i++) //Repeat for numLoot you want to spawn
         {
             int rand = Random.Range(0, loot.Length); //Pick a random game object in the array
-            Instantiate(loot[rand], transform.position, Quaternion.identity); //Spawn it
+            Vector3 offset = new Vector3(Random.Range(-variance, variance), Random.Range(-variance, variance), 0f);
+            Instantiate(loot[rand], transform.position + offset, Quaternion.identity); //Spawn it
             Debug.Log("Spawned " + i + "of " + numLoot);
         }
         Destroy(gameObject); //Get rid of the corpse
