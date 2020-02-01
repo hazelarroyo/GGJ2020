@@ -33,7 +33,7 @@ public class LootScript : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.A)) //Arbitrary set to A for testing
+        if (Input.GetKey(KeyCode.Q)) //Arbitrary set to A for testing
         {
             if (currentLootTime <= maxLootTime) //If timer under max, increase it
             {
