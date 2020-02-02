@@ -30,14 +30,6 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void CompleteObject(GameObject one, GameObject two)
-    {
-        Destroy(one);
-        Destroy(two);
-        //Get points
-        //Unequip
-    }
-
     public void DecreaseHealth()
     {
         Debug.Log("Get shit on!");
