@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class PlayerHealthScript : MonoBehaviour
 {
@@ -20,9 +19,17 @@ public class PlayerHealthScript : MonoBehaviour
 
     public Animator anim;
 
+    Animator charanim;
+
+    Vector2 startPosition;
+
     void Start()
     {
         playerHealth = 6;
+
+        startPosition = transform.position;
+
+        charanim = GetComponent<Animator>();
     }
 
     void Update()
@@ -70,10 +77,24 @@ public class PlayerHealthScript : MonoBehaviour
     IEnumerator Loser()
     {
         anim.Play("lose");
+        playerHealth = 6;
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
 
-        SceneManager.LoadScene("GameSceneMain", LoadSceneMode.Single);
+        gameObject.transform.position = startPosition;
+        charanim.SetTrigger("idle");
+
+        heartA.enabled = true;
+        halfHeartA.enabled = true;
+        heartB.enabled = true;
+        halfHeartB.enabled = true;
+        heartC.enabled = true;
+        halfHeartC.enabled = true;
+
+        yield return new WaitForSeconds(7);
+
+        anim.gameObject.SetActive(false);
+        anim.gameObject.SetActive(true);
 
         yield return null;
     }
