@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3267086602124836395}
-  - component: {fileID: 3267086602124836394}
   - component: {fileID: 3267086602124836393}
   - component: {fileID: 3267086602124836392}
+  - component: {fileID: 168092776296332992}
   m_Layer: 0
   m_Name: CorpseB
   m_TagString: Untagged
@@ -33,26 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3267086602124836394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3267086602124836407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bd3e070964c2154c93ce2f78a128410, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gm: {fileID: 0}
-  loot:
-  - {fileID: 4939848571503984441, guid: 85ad374e6ead3b44290c65f04f120579, type: 3}
-  currentLootTime: 0
-  maxLootTime: 3
-  increaseTimer: 0.1
-  maxNumLoot: 5
-  variance: 2
 --- !u!212 &3267086602124836393
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -129,3 +109,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.48, y: 2.9607227}
   m_EdgeRadius: 0
+--- !u!114 &168092776296332992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3267086602124836407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bd3e070964c2154c93ce2f78a128410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gm: {fileID: 0}
+  loot:
+  - {fileID: 3459148784045186149, guid: d7f817fde435649cfbb6b45861acb96a, type: 3}
+  - {fileID: 5230672379193840668, guid: 22cf405823dae44faa18dcb5a9c986ed, type: 3}
+  - {fileID: 9181864699785862579, guid: 588a0da50a0d2439e82615e838829516, type: 3}
+  - {fileID: 4661338037465029482, guid: 766d62722380b47bd81fbaec117321fe, type: 3}
+  - {fileID: 2704965026618131272, guid: 7b0c4426ff4734221a294a439dcbfcd2, type: 3}
+  - {fileID: 2217803559198995886, guid: abe56d2ec30404a388ab7d2f17b636b6, type: 3}
+  currentLootTime: 0
+  maxLootTime: 3
+  increaseTimer: 0.1
+  maxNumLoot: 5
+  variance: 2

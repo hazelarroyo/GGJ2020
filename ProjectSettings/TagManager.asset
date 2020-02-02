@@ -7,6 +7,8 @@ TagManager:
   - GameManager
   - Enemy
   - Axe
+  - Staff
+  - Sword
   layers:
   - Default
   - TransparentFX

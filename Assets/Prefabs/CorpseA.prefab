@@ -49,6 +49,10 @@ MonoBehaviour:
   loot:
   - {fileID: 3459148784045186149, guid: d7f817fde435649cfbb6b45861acb96a, type: 3}
   - {fileID: 5230672379193840668, guid: 22cf405823dae44faa18dcb5a9c986ed, type: 3}
+  - {fileID: 9181864699785862579, guid: 588a0da50a0d2439e82615e838829516, type: 3}
+  - {fileID: 4661338037465029482, guid: 766d62722380b47bd81fbaec117321fe, type: 3}
+  - {fileID: 2704965026618131272, guid: 7b0c4426ff4734221a294a439dcbfcd2, type: 3}
+  - {fileID: 2217803559198995886, guid: abe56d2ec30404a388ab7d2f17b636b6, type: 3}
   currentLootTime: 0
   maxLootTime: 3
   increaseTimer: 0.1
