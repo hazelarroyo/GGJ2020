@@ -9,16 +9,18 @@ public class GameManager : MonoBehaviour
     public GameObject[] corpses;
     public Transform[] corpseSpawnPoints;
     public GameObject player;
-    public GameObject[] inventory;
     public int score;
+    public int points = 100;
     public int health;
     public int corpseCounter;
     public int spawnRate;
+    public PickupScript ps;
     
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        ps = player.GetComponent<PickupScript>();
         score = 0;
         corpseCounter = spawnRate;
         SpawnCorpse();
@@ -30,12 +32,12 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void CompleteObject(GameObject one, GameObject two)
+    public void CompleteObject(GameObject match)
     {
-        Destroy(one);
-        Destroy(two);
-        //Get points
-        //Unequip
+        Destroy(ps.held);
+        ps.held = null;
+        Destroy(match);
+        score += points;
     }
 
     public void DecreaseHealth()
