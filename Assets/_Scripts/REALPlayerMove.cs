@@ -20,6 +20,8 @@ public class REALPlayerMove : MonoBehaviour
     private int extraJumps;
     public int extraJumpsValue;
 
+    public GameObject bomb;
+
     void Start()
     {
         extraJumps = extraJumpsValue;
@@ -69,6 +71,11 @@ public class REALPlayerMove : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.UpArrow) && extraJumps == 0 && isGrounded == true)
         {
             rb.velocity = Vector2.up * jumpForce;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(bomb, transform.position, Quaternion.identity);
         }
     }
 
