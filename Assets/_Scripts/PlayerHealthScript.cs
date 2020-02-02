@@ -9,10 +9,13 @@ public class PlayerHealthScript : MonoBehaviour
 
     public Image heartA;
     public Image halfHeartA;
+    public Image empHeartA;
     public Image heartB;
     public Image halfHeartB;
+    public Image empHeartB;
     public Image heartC;
     public Image halfHeartC;
+    public Image empHeartC;
 
     void Start()
     {
