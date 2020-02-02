@@ -58,7 +58,7 @@ public class EnemyScript : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            gm.DecreaseHealth();
+            //gm.DecreaseHealth();
             Destroy(gameObject);
         }
     }
