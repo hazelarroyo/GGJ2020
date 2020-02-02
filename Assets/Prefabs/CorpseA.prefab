@@ -47,7 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gm: {fileID: 0}
   loot:
-  - {fileID: 4939848571503984441, guid: 85ad374e6ead3b44290c65f04f120579, type: 3}
+  - {fileID: 3459148784045186149, guid: d7f817fde435649cfbb6b45861acb96a, type: 3}
+  - {fileID: 5230672379193840668, guid: 22cf405823dae44faa18dcb5a9c986ed, type: 3}
   currentLootTime: 0
   maxLootTime: 3
   increaseTimer: 0.1
