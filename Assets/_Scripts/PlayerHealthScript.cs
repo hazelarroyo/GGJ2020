@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealthScript : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class PlayerHealthScript : MonoBehaviour
     public Image halfHeartC;
     public Image empHeartC;
 
+    public Animator anim;
+
     void Start()
     {
         playerHealth = 6;
@@ -28,6 +31,32 @@ public class PlayerHealthScript : MonoBehaviour
         {
             heartA.enabled = false;
         }
+
+        if (playerHealth <= 4)
+        {
+            halfHeartA.enabled = false;
+        }
+
+        if (playerHealth <= 3)
+        {
+            heartB.enabled = false;
+        }
+
+        if (playerHealth <= 2)
+        {
+            halfHeartB.enabled = false;
+        }
+
+        if (playerHealth <= 1)
+        {
+            heartC.enabled = false;
+        }
+
+        if (playerHealth == 0)
+        {
+            halfHeartC.enabled = false;
+            StartCoroutine("Loser");
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -36,5 +65,16 @@ public class PlayerHealthScript : MonoBehaviour
         {
             playerHealth -= 1;
         }
+    }
+
+    IEnumerator Loser()
+    {
+        anim.Play("lose");
+
+        yield return new WaitForSeconds(5);
+
+        SceneManager.LoadScene("GameSceneMain", LoadSceneMode.Single);
+
+        yield return null;
     }
 }
