@@ -203,7 +203,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Many confident men and women journeyed into the Castle of Name Tee Bee Dee,
+  m_Text: Many confident men and women journeyed into the Castle of Name TeeBeeDee,
     searching for this power, hoping to find it and prove that they were the Chosen
     One destined to defeat the evil king.
 --- !u!222 &61964635
@@ -715,10 +715,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Long ago, in the kingdom of Whatever-the-Fuck, an evil king terrorized the
-    land and his people with...terror. Ancient prophecy told of a legendary hero who
-    would discover a great power in the Castle of Name Tee Bee Dee, using it to rise
-    up and smite the evil king.
+  m_Text: Long ago, in the kingdom of Blerg, an evil king terrorized the land and
+    his people with...terror. Ancient prophecy told of a legendary hero who would
+    discover a great power in the Castle of Name TeeBeeDee, using it to rise up and
+    smite the evil king.
 --- !u!222 &1116443961
 CanvasRenderer:
   m_ObjectHideFlags: 0
