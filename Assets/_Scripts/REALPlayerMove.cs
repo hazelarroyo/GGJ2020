@@ -22,10 +22,15 @@ public class REALPlayerMove : MonoBehaviour
 
     public GameObject bomb;
 
+    Animator anim;
+
     void Start()
     {
         extraJumps = extraJumpsValue;
+
         rb = GetComponent<Rigidbody2D>();
+
+        anim = GetComponent<Animator>();
     }
 
 
@@ -48,6 +53,8 @@ public class REALPlayerMove : MonoBehaviour
 
     void Update()
     {
+        AnimationControls();
+
         if (isGrounded == true)
         {
             extraJumps = extraJumpsValue;
@@ -85,5 +92,38 @@ public class REALPlayerMove : MonoBehaviour
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
+    }
+
+    void AnimationControls()
+    {
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            anim.SetTrigger("walk");
+        }
+
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            anim.SetTrigger("walk");
+        }
+
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            anim.SetTrigger("jump");
+        }
+
+        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            anim.SetTrigger("idle");
+        }
+
+        if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            anim.SetTrigger("idle");
+        }
+
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow))
+        {
+            anim.SetTrigger("idle");
+        }
     }
 }
