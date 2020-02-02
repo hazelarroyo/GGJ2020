@@ -16,20 +16,32 @@ public class PlayerHealthScript : MonoBehaviour
 
     void Start()
     {
+<<<<<<< HEAD
         playerHealth = 6;
+=======
+
+>>>>>>> e90d3cda13c825e098a68ac1d163e36c9dcad7f2
     }
 
     void Update()
     {
+<<<<<<< HEAD
         if(playerHealth <= 5)
         {
             heartA.enabled = false;
         }
+=======
+
+>>>>>>> e90d3cda13c825e098a68ac1d163e36c9dcad7f2
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+<<<<<<< HEAD
         if(collision.gameObject.name == "Enemy")
+=======
+        if (collision.gameObject.CompareTag("Enemy"))
+>>>>>>> e90d3cda13c825e098a68ac1d163e36c9dcad7f2
         {
             playerHealth -= 1;
         }
