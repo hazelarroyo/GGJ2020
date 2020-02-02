@@ -12,4 +12,9 @@ public class FEATURESTOADD : MonoBehaviour
     ///Add visual cue for which part goes with which
     ///Add trigger by the shop to end level and get points
     ///Update item UI for how many of each you've created
+    ///Add introductory animation
+    ///(Maybe) Give ye olde shoppe a clear entry/exit point and colliders
+    ///(Maybe) add animation that plays briefly when you find all applicable pieces for one item
+    ///Add audio for jumping, collecting, etc.
+    ///Create score system and add ability to earn high score
 }
