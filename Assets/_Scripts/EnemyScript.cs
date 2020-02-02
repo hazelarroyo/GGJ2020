@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
+    public GameManager gm;
+
     public GameObject player;
     public Transform target;
     public float speed = 3f;
@@ -16,6 +18,7 @@ public class EnemyScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         player = GameObject.FindGameObjectWithTag("Player");
         target = player.transform;
         rb = GetComponent<Rigidbody2D>();
@@ -49,5 +52,14 @@ public class EnemyScript : MonoBehaviour
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            gm.DecreaseHealth();
+            Destroy(gameObject);
+        }
     }
 }
