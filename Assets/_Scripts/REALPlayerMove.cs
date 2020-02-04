@@ -7,6 +7,7 @@ public class REALPlayerMove : MonoBehaviour
     public float speed;
     public float jumpForce;
     private float moveInput;
+    public float moveDistance = 1f;
 
     private Rigidbody2D rb;
 
@@ -38,8 +39,8 @@ public class REALPlayerMove : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
-        moveInput = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        //moveInput = Input.GetAxisRaw("Horizontal");
+        //rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
         if (facingRight == false && moveInput > 0)
         {
@@ -54,6 +55,8 @@ public class REALPlayerMove : MonoBehaviour
     void Update()
     {
         AnimationControls();
+
+        MovementControls();
 
         if (isGrounded == true)
         {
@@ -124,6 +127,19 @@ public class REALPlayerMove : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow))
         {
             anim.SetTrigger("idle");
+        }
+    }
+
+    void MovementControls()
+    {
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        {
+            transform.Translate(-moveDistance, 0, 0);
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        {
+            transform.Translate(moveDistance, 0, 0);
         }
     }
 }
